@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Cumpleaños 25 🎂</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive;
+            background: #fff8e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #b8860b;
+            margin-bottom: 0.5rem;
+        }
+
+        .sub {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #a0522d;
+        }
+
+        .pompompurin-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .pompompurin-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .letter {
+            position: absolute;
+            bottom: 75px;
+            left: 49%;
+            transform: translateX(-50%);
+            width: 83px;
+            height: 60px;
+            background: #fff;
+            border: 2px solid #d4af37;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease; /* Añadimos transiciones */
+            z-index: 2;
+        }
+
+        .letter:hover {
+            transform: translateX(-50%) translateY(-5px) rotateZ(-5deg); /* Simula una apertura, moviéndose ligeramente y rotando */
+            background-color: #ffe082; /* Un color más claro para simular apertura */
+            border-bottom-left-radius: 20px; /* Curvas para simular una solapa abierta */
+            border-bottom-right-radius: 20px;
+        }
+
+        .message {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            background: #fffaf0;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 3;
+            text-align: center; /* Centramos el texto del mensaje */
+            line-height: 1.5; /* Mejoramos la legibilidad */
+            color: #6a0505; /* Un color de texto más cálido */
+        }
+
+        .message.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎉 ¡Feliz cumpleaños número 25, mi amor! 🎉</h1>
+    <div class="sub">Con todo mi corazón, para ti 💛</div>
+
+    <div class="pompompurin-container">
+        <img src="image.png" alt="Pompompurin">
+        <div class="letter" onclick="toggleMessage()"></div>
+        <div class="message" id="loveMessage">
+            💌<br>
+            Mi Lenny, hoy celebramos tus maravillosos 25 años 🎂.<br>
+            Eres la luz que ilumina cada uno de mis días ✨,<br>
+            la calma que encuentro en medio de la tormenta ⛈️,<br>
+            y la ternura que me envuelve por completo ❤️‍🩹.<br>
+            Deseo que este sea solo el inicio de muchos , muchos años más 🚩<br>
+            de risas ☺️, sueños 💫 y amor incondicional a tu lado 💞.<br>
+            Te amo con cada latido de mi ser, hoy y siempre. 💘
+        </div>
+    </div>
+
+    <script>
+        function toggleMessage() {
+            const msg = document.getElementById("loveMessage");
+            msg.classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>
